@@ -44,8 +44,11 @@ If you're having trouble, try rebooting Visual Studio or your computer.
 
 Deploying the app onto an emulator
 ----------------------------------
+
+NOTE: We've added a picture of an example of how we configured our emulator (/docs/emulator-settings.png).
+
 Make sure you
-   - created an emulator in Tools -> Android -> Android Device Manager -> Create. We've added a picture showing an example of how we set up our emulator.
+   - created an emulator in Tools -> Android -> Android Device Manager -> Create.
    - have installed the correct SDK version in Tools -> Android -> Android SDK Manager. You can only create an emulator targeting a specific Android version after you have installed the corresponding SDK.
    - have created an emulator that targets an Android version that is at least newer than Android 4.0. We suggest you use Android 5.0.1 (API 21).
    - have installed HAXM (granted you have an Intel processor) and disabled Hyper-V
