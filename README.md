@@ -70,6 +70,10 @@ Turning off Hyper-V
  Though we haven't tested this a lot yet, it might be a good idea to try this tool if the above steps are not working for you.
  This tool allows you to download ready-to-go emulators with a single click, after which you can deploy your app on them.
 
+Finsihed?
+=========
+You're ready if you can succesfully deploy the app in this repo on your device or emulator.
+When the app boots you should see a nice 'Hello dojo!' greeting.
 
 TROUBLESHOOTING
 ===============
