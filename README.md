@@ -82,6 +82,8 @@ What you need to build and deploy the solution on your mac.
 In order to deploy the iOS project from a mac, you need to either deploy to an iPhone, or an emulator with iOS.
 It should to be possible to also build the Android project in Xamarin Studio, though we're not confident about this ourselves.
 
+Deploying on an emulator does not require you to install anything special, and should be available after installing both Xamarin Studio and XCode.
+
 --- NOTE ---
 - Xamarin in Visual Studio on a Windows machine offers a way to use a mac computer to serve as a build host for the iOS project. If you and your dojo partner together have access to both a mac and a windows machine, you can deploy both the Android and iOS project (from the Windows machine). Using a mac as a build host actually worked really well for us when testing it, so if you have the option you should try it!
 
