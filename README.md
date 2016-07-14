@@ -9,22 +9,24 @@ Visual Studio 2015 with Xamarin
 Follow the link for a tutorial on how to install Visual Studio 2015 with Xamarin for free.
 https://msdn.microsoft.com/en-us/library/mt613162.aspx
  - In the dojo we're using the Xamarin version that comes with the Visual Studio 2015 Community Edition (if you already have Xamarin installed, you can update it through visual studio).
+ - Licenced versions of Visual Studio 2015 should work just as well.
 
 Configuring the dojo project
 ============================
 Clone the project.
 Restore solutions packages with Nuget.
-You should now be able to build the project. If not, see if you can solve the problem by unloading the projects belonging to the platforms you're not going  to use (e.g. Windows Phone)
+You should now be able to build the project. If not, see if you can solve the problem by unloading the projects belonging to the platforms you're not going to use (e.g. Windows Phone)
 
- - If  you're getting errors in the android project
-    - Make sure the project settings are configured correctly (android project -> properties -> application)
-        - Compile using Android version: Use Latest Platform
-        - Minimum Android to target version: Android 4.0.3 (API Level 15)
-        - Target Android version: Use Comppile using SDK version
-    - Make sure all packages are installed correctly through Nuget.
 
 Android
 =======
+ - Make sure the project settings are configured correctly (android project -> properties -> application)
+    - Compile using Android version: Use Latest Platform
+    - Minimum Android to target version: Android 4.0.3 (API Level 15)
+    - Target Android version: Use Comppile using SDK version
+ - Make sure all packages are installed correctly through Nuget.
+
+
 After installing Visual Studio with Xamarin, you should be able to navigate in VS
     Tools -> Android -> Android SDK Manager
 In the SDK manager install everything from the directory of the SDK version you're planning on using.
@@ -66,9 +68,22 @@ Turning off Hyper-V
  You can simply turn on Hyper-V later, though you'll have to find another way to run an Android emulator if disabling Hyper-V is not an option for you.
 
  --- NOTE ---
- We found that with a default installation of Xamarin there comes a tool called 'Visual Studio Emulator for Android'.
+ - We found that with a default installation of Xamarin there comes a tool called 'Visual Studio Emulator for Android'.
  Though we haven't tested this a lot yet, it might be a good idea to try this tool if the above steps are not working for you.
  This tool allows you to download ready-to-go emulators with a single click, after which you can deploy your app on them.
+ - It is not possible to build or deploy the iOS project from a Windows computer. This means that if you're using Windows, you need an Android device, or an emulator.
+
+iOS
+===
+What you need to build and deploy the solution on your mac.
+  - Xamarin Studio
+  - XCode
+
+In order to deploy the iOS project from a mac, you need to either deploy to an iPhone, or an emulator with iOS.
+It should to be possible to also build the Android project in Xamarin Studio, though we're not confident about this ourselves.
+
+--- NOTE ---
+- Xamarin in Visual Studio on a Windows machine offers a way to use a mac computer to serve as a build host for the iOS project. If you and your dojo partner together have access to both a mac and a windows machine, you can deploy both the Android and iOS project (from the Windows machine). Using a mac as a build host actually worked really well for us when testing it, so if you have the option you should try it!
 
 Finished?
 =========
@@ -82,7 +97,7 @@ In this section we will list problems that have been encountered, with a solutio
 If you ran into trouble, you can contact us through this meeptup if you can't seem to solve your problem, 
 or provide us with your solution to it so that other people may use the fruit of your struggle.
 
-Problems (with their solutions)
+Problems (with their solutions) (Android)
  - VS ERROR: Please install package < XXX > available in SDK installer. Java library file < FILEPATH > doesn't exist.
    Solution: Delete all from the path: C:\Users\USERNAME\AppData\Local\Xamarin Folders and Zip files. And then rebuild your project.
    Source  : http://stackoverflow.com/a/37827122
