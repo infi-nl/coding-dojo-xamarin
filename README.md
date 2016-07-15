@@ -103,3 +103,9 @@ Problems (with their solutions) (Android)
  - VS ERROR: Please install package < XXX > available in SDK installer. Java library file < FILEPATH > doesn't exist.
    Solution: Delete all from the path: C:\Users\USERNAME\AppData\Local\Xamarin Folders and Zip files. And then rebuild your project.
    Source  : http://stackoverflow.com/a/37827122
+ - emulator not starting (couldn`t setup the UDP port)
+   Solution: (see link)
+   Source  : http://stackoverflow.com/questions/31571555/how-do-you-get-the-vs-android-emulator-images-to-launch
+ - AOT module 'mscorlib.dll.so' not found: dlopen failed
+   Solution: (see link)
+   Source  : http://stackoverflow.com/questions/34800168/xamarin-forms-android-app-crashes-running-debug-with-vs-android-emulator
