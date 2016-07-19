@@ -2,8 +2,11 @@ Useful links
 ============
 
 https://developer.xamarin.com/guides/xamarin-forms/controls/
+
 https://developer.xamarin.com/guides/xamarin-forms/user-interface/navigation/
+
 https://developer.xamarin.com/guides/xamarin-forms/user-interface/gestures/
+
 https://developer.xamarin.com/guides/xamarin-forms/effects/
 
 Infi Coding Dojo - Xamarin QuizApp
