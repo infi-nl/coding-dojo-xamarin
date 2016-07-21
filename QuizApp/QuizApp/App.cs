@@ -2,38 +2,43 @@
 using Infi.Dojo.Xamarin.QuizApi;
 using Xamarin.Forms;
 
-namespace Infi.Dojo.Xamarin.QuizApp {
+namespace Infi.Dojo.Xamarin.QuizApp
+{
+	public class App : Application
+	{
+		private static readonly QuizApiClient QuizApiClient = new QuizApiClient("http://infi-dojo-quizapi.azurewebsites.net/");
 
-    public class App : Application {
+		public App()
+		{
+			DisplayQuestionPage();
+		}
 
-        private static readonly QuizApiClient QuizApiClient = new QuizApiClient("http://infi-dojo-quizapi.azurewebsites.net/");
+		protected void DisplayQuestionPage()
+		{
+			Question question = QuizApiClient.GetRandomQuestion();
 
-        public App() {
-            MainPage = new ContentPage {
-                Content = new StackLayout {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                        new Label {
-                            HorizontalTextAlignment = TextAlignment.Center,
-                            Text = "Hello Dojo!"
-                        }
-                    },
-                }
-            };
-        }
+			QuestionPage questionPage = new QuestionPage(question)
+			{
+				ValidateAnswer = (questionId, answerKey) => QuizApiClient.CheckAnswer(questionId, answerKey).IsCorrect,
+				ShowNextQuestion = DisplayQuestionPage
+			};
 
-        protected override void OnStart() {
-            // Handle when your app starts
-        }
+			MainPage = questionPage;
+		}
 
-        protected override void OnSleep() {
-            // Handle when your app sleeps
-        }
+		protected override void OnStart()
+		{
+			// Handle when your app starts
+		}
 
-        protected override void OnResume() {
-            // Handle when your app resumes
-        }
-        
-    }
+		protected override void OnSleep()
+		{
+			// Handle when your app sleeps
+		}
 
+		protected override void OnResume()
+		{
+			// Handle when your app resumes
+		}
+	}
 }

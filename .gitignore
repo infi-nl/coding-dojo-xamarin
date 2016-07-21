@@ -203,3 +203,6 @@ code/Pepper.Util/GitVersioningInformation.cs
 code/Pepper.Util/GitVersioningInformation.txt
 /code/Pepper.Models/App_Data/Pepper.Models.XML
 /code/Pepper.WebService/App_Data/Pepper.WebService.XML
+
+# Nuget packages
+/[Pp]ackages/
