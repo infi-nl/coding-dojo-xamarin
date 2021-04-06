@@ -1,16 +1,9 @@
-Useful links
-============
-
-https://developer.xamarin.com/guides/xamarin-forms/controls/
-
-https://developer.xamarin.com/guides/xamarin-forms/user-interface/navigation/
-
-https://developer.xamarin.com/guides/xamarin-forms/user-interface/gestures/
-
-https://developer.xamarin.com/guides/xamarin-forms/effects/
-
 Infi Coding Dojo - Xamarin QuizApp
 ==================================
+
+----
+**⚠ Warning:** This repository is _frozen in time_, and getting no new (security) updates. It is left public, should it help and offer some guidance around its subjects to future visitors. However, for latest guidance on involved subjects, we recommend going to the official sources.
+----
 
 This is the basic Xamarin solution for the Coding Dojo held at Infi on July 19th, 2016. The solution contains a basic set of classes to build a simple Xamarin application. A facade to the Quiz API to retrieve quiz questions and check answers has already been implemented and is avaiable for use in the app.
 
@@ -120,3 +113,14 @@ Problems (with their solutions) (Android)
  - AOT module 'mscorlib.dll.so' not found: dlopen failed
    Solution: (see link)
    Source  : http://stackoverflow.com/questions/34800168/xamarin-forms-android-app-crashes-running-debug-with-vs-android-emulator
+
+Useful links
+============
+
+https://developer.xamarin.com/guides/xamarin-forms/controls/
+
+https://developer.xamarin.com/guides/xamarin-forms/user-interface/navigation/
+
+https://developer.xamarin.com/guides/xamarin-forms/user-interface/gestures/
+
+https://developer.xamarin.com/guides/xamarin-forms/effects/
